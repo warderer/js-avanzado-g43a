@@ -25,3 +25,28 @@ function getPokemonThen(name = 'ditto') {
 }
 
 getPokemonThen()
+
+
+// RESOLVER PROMESAS 2: ASYNC/AWAIT - Pokéapi
+async function getPokemonAsync(name = 'ditto') {
+    try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const pokemon = await response.json();
+        console.log('Nombre:', pokemon.name);
+        console.log('ID:', pokemon.id);
+        console.log('Peso:', pokemon.weight);
+        console.log('Altura:', pokemon.height);
+        console.log('Habilidades'), pokemon.abilities.forEach(ability => {
+            console.log(' -', ability.ability.name);
+        });
+        return pokemon;
+    } catch (error) {
+        console.error('Error al obtener el Pokémon:', error.message);
+        throw error;
+    }
+}
+
+getPokemonAsync('pikachu')
