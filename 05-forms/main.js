@@ -42,13 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log("Enviando datos del usuario:", datosUsuario);
 
-        // Llamada a la API de reqres.in para simular el registro
+        // Llamada a la API de jsonplaceholder para simular el registro
         try {
-            const respuesta = await fetch('https://reqres.in/api/users', {
+            const respuesta = await fetch('https://jsonplaceholder.typicode.com/users', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
-                    'x-api-key': 'reqres-free-v1'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(datosUsuario)
             });
@@ -61,12 +60,38 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Usuario Registrado Exitosamente:", data);
 
             // Mostrar mensaje de éxito en la UI
-        mensajeExito.textContent = "¡Registro exitoso!, usuario credao con ID: " + data.id;
-        mensajeExito.style.display = "block";
+            mensajeExito.textContent = "¡Registro exitoso!, usuario creado con ID: " + data.id;
+            mensajeExito.style.display = "block";
 
-        // Limpiar el formulario y las clases de validación
-        form.reset();
-        document.querySelectorAll('.form-group input, .form-group select').forEach(input => input.classList.remove('success', 'error'));
+            // Limpiar el formulario y las clases de validación
+            form.reset();
+            document.querySelectorAll('.form-group input, .form-group select').forEach(input => input.classList.remove('success', 'error'));
+
+        // Llamada a la API de reqres.in para simular el registro
+        // try {
+        //     const respuesta = await fetch('https://reqres.in/api/users', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'x-api-key': 'reqres-free-v1'
+        //         },
+        //         body: JSON.stringify(datosUsuario)
+        //     });
+
+        //     if (!respuesta.ok) {
+        //         throw new Error(`Error en la solicitud: ${respuesta.status}`);
+        //     }
+
+        //     const data = await respuesta.json();
+        //     console.log("Usuario Registrado Exitosamente:", data);
+
+        //     // Mostrar mensaje de éxito en la UI
+        // mensajeExito.textContent = "¡Registro exitoso!, usuario creado con ID: " + data.id;
+        // mensajeExito.style.display = "block";
+
+        // // Limpiar el formulario y las clases de validación
+        // form.reset();
+        // document.querySelectorAll('.form-group input, .form-group select').forEach(input => input.classList.remove('success', 'error'));
 
         } catch (error) {
             console.error("Error al registrar el usuario:", error);
