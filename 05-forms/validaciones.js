@@ -51,7 +51,7 @@ function validarPais(pais) {
 }
 
 function validarTerminos(inputTerminos) {
-    const errorSpan = inputTerminos.parentElement.querySelector(".error.text-inline")
+    const errorSpan = inputTerminos.parentElement.querySelector(".error-text-inline")
     errorSpan.textContent = !inputTerminos.checked
         ? "Debe aceptar los términos y condiciones."
         : "";
