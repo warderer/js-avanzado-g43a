@@ -20,7 +20,7 @@ export function mostrarErrores(issues) {
             input.classList.remove('success');
             input.classList.add('error');
 
-            const errorSpan = input.parentElement.querySelector('.error-text-inline) || input.nextElementSibling;')
+            const errorSpan = input.parentElement.querySelector('.error-text-inline') || input.nextElementSibling
             if (errorSpan) {
                 errorSpan.textContent = issue.message; // Mostrar el mensaje de error
             }
