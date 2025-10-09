@@ -7,8 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "saludar": "echo \"Hola, este es un script de ejemplo en package.json\""
   },
-  "keywords": ["nodejs", "npm", "javascript"],
+  "keywords": [
+    "nodejs",
+    "npm",
+    "javascript"
+  ],
   "author": "César Guerra",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.12.2"
+  }
 }
