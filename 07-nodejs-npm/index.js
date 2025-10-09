@@ -7,7 +7,7 @@ const API_URL = 'http://api.open-notify.org/astros.json';
 // Paso #3: Crear una función asíncrona para obtener los datos de la API
 const getAstronauts = async () => {
     try {
-        console.log('Buscando datos de astronautas en el espacio...');
+        console.log('Buscando los datos de astronautas en el espacio...');
 
         const response = await axios.get(API_URL);
         const astronauts = response.data.people;
