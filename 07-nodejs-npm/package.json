@@ -1,0 +1,13 @@
+{
+  "name": "07-nodejs-npm",
+  "version": "1.0.0",
+  "description": "Ejemplo básico de un proyecto Node.js utilizando npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["nodejs", "npm", "javascript"],
+  "author": "César Guerra",
+  "license": "ISC",
+  "type": "commonjs"
+}
