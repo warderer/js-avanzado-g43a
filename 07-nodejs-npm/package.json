@@ -4,7 +4,8 @@
   "description": "Ejemplo básico de un proyecto Node.js utilizando npm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "saludar": "echo \"Hola, este es un script de ejemplo en package.json\""
   },
   "keywords": ["nodejs", "npm", "javascript"],
   "author": "César Guerra",
